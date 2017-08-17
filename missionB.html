@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Super Sniper</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body style="overflow: hidden; cursor: none;" class="unselectable">
+        <div class="holder" id="holder">
+            <div class="mission_instruction">
+                <h1>Instruction</h1>
+                <ul>
+                    <h2>Keyboard</h2>
+                    <li>
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                        <div>5</div>
+                        <div>6</div>
+                        <p>Change Weapons</p>
+                    </li>
+                    <li>
+                        <div>R</div>
+                        <p>Reload</p>
+                    </li>
+                    <h2>Mouse</h2>
+                    <li>
+                        <div style="width:100px">Left-click</div>
+                        <p>Shoot</p>
+                    </li>
+                    <li>
+                        <div style="width:100px">Left-click</div>
+                        <p>Head shot with more score</p>
+                    </li>
+                </ul>
+                <button id="instruction_go">GO</button>
+            </div>
+            <div class="mission_weapon_bag" id="mission_weapon_bag">
+                <ul class="mission_equip_list">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <button value="RESET" id="reset_btn">RESET</button>
+                </ul>
+                <ul id="mission_weapon_list" class="mission_weapon_list">
+                </ul>
+                <div class="game_start_button">
+                    <button id="start">Start</button>
+                    <div class="start_cover" data-toggle="tooltip" data-placement="top" title="You haven't equiped weapon yet!"></div>
+                    <button id="start_exit">Exit</button>
+                </div>
+                
+            </div>
+            <div class="game_shot"></div>
+            <div class="game_over" id="game_over">
+                <div class="game_over_win"><h1>Mission Complete!</h1></div>
+                <div class="game_over_fail"><h1>Mission Failed!</h1></div>
+                <div class="game_over_score"></div>
+                <div class="game_over_button">
+                    <button id="tryAgain">Try Again</button>
+                    <button id="over_exit">Exit</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script language="javascript" type="text/javascript" src="js/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/missionB.js"></script>
+</html>

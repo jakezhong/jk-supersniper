@@ -1,0 +1,871 @@
+html {
+    cursor: url(../target.gif), auto;
+}
+
+h1 {
+    padding: 5px;
+    font-size: 14pt;
+    font-style: italic;
+}
+body {
+    font-family: arial;
+    font-size: 10pt;
+    background-color: #000;
+    color: #CCC;
+    cursor: url(../target.gif), auto;
+    margin: 0;
+    padding: 0;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#holder {
+    position: relative;
+    top: 40px;
+    width: 800px;
+    height:600px;
+    margin: auto;
+    border: 2px solid #333;
+    cursor: url(../target.gif), auto;
+}
+#canvas {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    cursor: url(../target.gif), auto;
+
+}
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    background-image: url("../gun.gif");
+    cursor: url(../target.gif), auto;
+}
+
+/* ---------- Index Instruction Style ---------- */
+.index_instruction {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background: rgba(0,0,0,1);
+    z-index: 5;
+}
+
+.index_instruction h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 20px;
+    line-height: 100px;
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+}
+
+.index_instruction ul {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 100px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    list-style: none;
+    border-bottom: solid 2px #333;
+    padding-bottom: 20px;
+}
+
+.index_instruction ul li {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 50px;
+}
+
+.index_instruction ul li div {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 50px;
+    border: solid 1px #fff;
+}
+
+.index_instruction ul li p {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    float: right;
+}
+.index_instruction button {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 550px;
+    left: 360px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #111;
+    transition: all 0.3s;
+}
+
+.index_instruction button:hover {
+    cursor: pointer;
+    background: #888;
+}
+
+/* ---------- Index Map Style ---------- */
+#map, #underMap {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -250px;
+    z-index: 1;
+    padding: 0;
+    width: 500px;
+    height: 500px;
+}
+
+#map_container {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 600px;
+    z-index: 1;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+.map_close {
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    right: 32.5px;
+    float: right;
+    background: url("../image/close.png") no-repeat;
+    background-size: 100%;
+    background-position: 0 32.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.map_close:hover {
+    background: url("../image/closed.png") no-repeat;
+    background-size: 100%;
+    background-position: 0 32.5px;
+}
+.item_position {
+    position: absolute;
+    width: 200px;
+    height: 600px;
+    top: 40px;
+    left: 50%;
+    margin-left: -600px;
+    border: 2px solid #333;
+}
+
+.item_position ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.item_position li {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #888;
+}
+
+.item_position img {
+    vertical-align: middle;
+    float: left;
+}
+
+.weapon_position img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.weapon1_position img {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.player_position img{
+    border: solid 2px #666;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+.item_position img {
+    vertical-align: middle;
+    float: left;
+}
+
+.weapon_position img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.weapon1_position img {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.item_position li p {
+    float: right;
+    margin-right: 3px;
+    width: 90px;
+    height: 20px;
+    line-height: 20px;
+}
+/* ---------- Index weapon bag style ---------- */
+.weapon_bag {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 600px;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 1;
+}
+
+.weapon_bag h2 {
+    position: absolute;
+    width: 800px;
+    margin: 0;
+    font-size: 30px;
+    height: 100px;
+    float: left;
+    line-height: 100px;
+    text-align: center;
+}
+
+.weapon_close {
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    right: 32.5px;
+    float: right;
+    background: url("../image/close.png") no-repeat;
+    background-size: 100%;
+    background-position: 0 32.5px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.weapon_close:hover {
+    background: url("../image/closed.png") no-repeat;
+    background-size: 100%;
+    background-position: 0 32.5px;
+}
+
+.weapon_list {
+    position: absolute;
+    width: 800px;
+    height: 470px;
+    bottom: 0;
+    margin: auto;
+    padding: 0;
+    padding-bottom: 30px;
+    border-top: solid 2px #333;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 100;
+}
+
+.weapon_list li {
+    float: left;
+    width: 345px;
+    height: 320px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.5);
+    border: solid 2px rgba(42, 190, 255, 0.8);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.weapon_list li p {
+    margin: auto;
+    margin-top: 15px;
+    width: 80%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.weapon_img {
+    width: 100%;
+    height: 120px;
+    margin-top: 20px;
+    float: left;
+}
+
+.weapon_btn {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+}
+
+.weapon_btn button {
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255,255,255,0.8);
+    transition: all 0.3s;
+}
+
+.weapon_btn button:hover {
+    cursor: pointer;
+    background: #888;
+}
+
+.tool_list {
+    position: absolute;
+    width: 800px;
+    height: 60px;
+    bottom: 0;
+}
+
+.tool_list ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tool_list ul li {
+    width: 150px;
+    transition: all 0.3s;
+}
+
+.tool_list ul li:hover {
+    opacity: 1;
+}
+
+.tool_bag {
+    float: left;
+    margin-left: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.tool_bag img{
+    height: 60px;
+}
+
+.tool_map {
+    float: left;
+    margin-left: 180px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.tool_map img {
+    margin-top: 10px;
+    height: 50px;
+}
+
+.tool_mission {
+    float: right;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.tool_mission img {
+    margin-top: 10px;
+    height: 50px;
+}
+
+.mission_cover {
+    position: absolute;
+    cursor: not-allowed;
+    width: 180px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* ---------- Right Corner Notification ---------- */
+.notification_container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    top: 0;
+}
+
+.notification_container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notification_container ul li {
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.6);
+    font-size: 22px;
+    text-align: center;
+    line-height: 100px;
+}
+
+.notification_weapon {
+    border: solid 2px rgba(93, 112, 255, 0.54);
+}
+
+.notification_mission {
+    border: solid 2px rgba(255, 93, 93, 0.54);
+}
+
+/* ---------- Mission Instruction Style ---------- */
+.mission_instruction {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background: rgba(0,0,0,0.8);
+}
+
+.mission_instruction h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 20px;
+    line-height: 100px;
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+}
+
+.mission_instruction ul {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 100px;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    list-style: none;
+    border-bottom: solid 2px #333;
+    padding-bottom: 20px;
+}
+
+.mission_instruction ul li {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    line-height: 50px;
+}
+
+.mission_instruction ul li div {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 50px;
+    border: solid 1px #fff;
+}
+
+.mission_instruction ul li p {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    float: right;
+}
+.mission_instruction button {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    top: 550px;
+    left: 360px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #111;
+    transition: all 0.3s;
+}
+
+.mission_instruction button:hover {
+    cursor: pointer;
+    background: #888;
+}
+
+/* ---------- Mission weapon bag style ---------- */
+.mission_weapon_bag {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    width: 800px;
+    height: 600px;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+
+.mission_weapon_list {
+    position: relative;
+    width: 770px;
+    height: 420px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 0 30px 0 0;
+    list-style: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    border-top: solid 2px #333;
+}
+
+.mission_weapon_list li {
+    width: 345px;
+    height: 350px;
+    margin-left: 36px;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.5);
+    border: solid 2px rgba(42, 190, 255, 0.8);
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.mission_weapon_list li p {
+    margin: auto;
+    margin-top: 15px;
+    width: 80%;
+    text-align: left;
+    font-size: 16px;
+}
+
+.mission_weapon_img {
+    width: 100%;
+    height: 120px;
+    margin-top: 30px;
+    float: left;
+}
+
+.mission_weapon_bag button {
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #111;
+    transition: all 0.3s;
+}
+
+.mission_weapon_bag button:hover {
+    cursor: pointer;
+    background: #888;
+}
+
+.mission_equip_list {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin: auto;
+    padding: 10px 0 0 20px;
+    list-style: none;
+}
+
+.mission_equip_list li {
+    width: 80px;
+    height: 80px;
+    margin: 0 20px 0 0;
+    float: left;
+    border: solid 1px #888;
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+    line-height: 80px;
+    background: rgba(255,255,255,0.4);
+}
+
+.mission_equip_list img {
+    margin-top: 30px;
+    width: 80px;
+}
+
+#reset_btn {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+
+.game_start_button {
+    position: absolute;
+    width: 100%;
+    top: 550px;
+    text-align: center;
+}
+
+.game_start_button button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.start_cover {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    bottom: 0;
+    left: 290px;
+    cursor: not-allowed;
+}
+
+.mission_equipBtn {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+.game_shot {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background: rgba(255,0,0,0.3);
+    display: none;
+}
+
+.missionEntrance {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 800px;
+    height:600px;
+    margin-left: -400px;
+    background: #000;
+    border: 1px solid #fff;
+    z-index: 100;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+.missionEntrance h1 {
+    margin-top: 220px;
+    font-size: 40px;
+}
+
+.missionEntrance button {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+}
+/* ---------- Style for gameover screen ---------- */
+.game_over {
+    position: absolute;
+    width: 800px;
+    height:600px;
+    background: #000;
+    display: none;
+}
+
+.game_over h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 100px;
+    line-height: 100px;
+    font-size: 55px;
+    text-align: center;
+    border-top: solid 2px #333;
+    border-bottom: solid 2px #333;
+    color: #c40101;
+}
+.game_over_win {
+    display: none;
+}
+
+.game_over_fail {
+    display: none;
+}
+
+.game_over_score {
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 100px;
+    font-size: 60px;
+    line-height: 100px;
+    text-align: center;
+    color: #fff;
+    display: none;
+}
+
+.game_over_button {
+    position: absolute;
+    width: 100%;
+    top: 450px;
+    text-align: center;
+    display: none;
+}
+
+.game_over_button button {
+    width: 120px;
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s;
+}
+
+.game_over_button button:hover {
+    cursor: pointer;
+    background: #888;
+}
+/* ---------- Refer from Bootstrap Tooltip ---------- */
+.tooltip{
+    position:absolute;
+    z-index:1070;
+    display:block;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:12px;
+    font-style:normal;
+    font-weight:400;
+    line-height:1.42857143;
+    text-align:left;
+    text-align:start;
+    text-decoration:none;
+    text-shadow:none;
+    text-transform:none;
+    letter-spacing:normal;
+    word-break:normal;
+    word-spacing:normal;
+    word-wrap:normal;
+    white-space:normal;
+    filter:alpha(opacity=0);
+    opacity:0;
+    line-break:auto
+}
+.tooltip.in{
+    filter:alpha(opacity=90);
+    opacity:.9
+}
+.tooltip.top{
+    padding:5px 0;
+    margin-top:-3px
+}
+.tooltip-inner{
+    max-width:200px;
+    padding:3px 8px;
+    color:#fff;
+    text-align:center;
+    background-color:#000;
+    border-radius:4px
+}
+.tooltip-arrow{
+    position:absolute;
+    width:0;
+    height:0;
+    border-color:transparent;
+    border-style:solid
+}
+.tooltip.top .tooltip-arrow{
+    bottom:0;
+    left:50%;
+    margin-left:-5px;
+    border-width:5px 5px 0;
+    border-top-color:#000
+}
+/* ---------- Style for mission selection page ---------- */
+.scene-selection {
+    width: 780px;
+    margin: auto;
+    margin-top: 50px;
+    cursor: url(../target.gif), auto;
+}
+/* ---------- Style for mission selection page ---------- */
+.scene-selection a{
+    cursor: url(../target.gif), auto;
+}
+.scene-mission {
+    width: 370px;
+    height: 370px;
+    margin: 10px;
+    float: left;
+}
+#scene-missionA {
+    background-image: url(../image/mission/background1.jpg);
+    background-size: 100%;
+    color: #fff;
+}
+#scene-missionB {
+    background-image: url(../image/mission/background2.jpg);
+    background-size: 100%;
+    color: #ff0000;
+}
+.scene-mission-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    display: block;
+}
+.scene-mission-overlay h2 {
+    position: absolute;
+    width: 370px;
+    height: 40px;
+    top: 250px;
+    line-height: 40px;
+    text-align: center;
+}
+.scene-selection h2{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+}
+.clear {
+    clear: both;
+}
